@@ -6,7 +6,14 @@ namespace DomainObjects
     {
         public int ID { get; set; }
         public int Type { get; set; }
-        public DateTime? Scheduled { get; set; }
+        private DateTime? _scheduled;
+        public DateTime? Scheduled { 
+            get {
+                Console.WriteLine("Poop");
+                return _scheduled;
+            } set {
+                _scheduled = value;
+            } }
         public DateTime? Entered { get; set; }
         public string Comment { get; set; }
         public double? HoursRemaining {
